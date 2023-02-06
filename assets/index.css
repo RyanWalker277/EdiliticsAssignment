@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+html {
+  font-family: Rubik !important;
+}
+
+body {
+  background: linear-gradient(-45deg, #096800, #4ae73c, #02c0ce, #feffff);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  padding: 30px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+a.active {
+  color: #2e5bff;
+  font-weight: 500;
+  background: rgba(46, 91, 255, 0.1);
+}
+a.active::before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  background-color: #2e5bff;
+}
+
+a:hover {
+  background-color: rgba(46, 91, 255, 0.1);
+}
+
+nav {
+  transition: all 0.2s;
+}
+nav.expanded .link-label {
+  display: none;
+}
+nav.expanded {
+  width: 66px;
+}
+
+nav.expanded ul li {
+  align-items: center;
+  justify-content: center;
+}
+
+nav.expanded ul li a {
+  align-items: center;
+  justify-content: center;
+}
+nav.expanded ul li a svg {
+  margin: 0;
+}

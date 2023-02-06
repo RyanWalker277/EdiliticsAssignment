@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.15/tailwind.min.css"
+    />
+    <link rel="stylesheet" href="/static/index.css" />
+  </head>
+  <body class="relative bg-yellow-50 overflow-hidden max-h-screen">
+    <header class="fixed right-0 top-0 left-60 py-3 px-4 h-16">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center justify-between">
+          <div></div>
+          <div class="text-lg font-bold text-white">Today's Plan</div>
+          <div></div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="w-52 bg-white fixed left-0 top-0 min-h-screen expanded">
+      <div class="logo p-6 flex items-center">
+        <svg
+          class="cursor-pointer"
+          width="18"
+          height="14"
+          viewBox="0 0 18 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 0H18V2H0V0ZM0 6H18V8H0V6ZM11 12H0V14H11V12Z"
+            fill="#BFC5D2"
+          />
+        </svg>
+      </div>
+      <ul class="flex flex-col items-center mt-8">
+        <li class="h-14 w-full">
+          <a
+            href="#"
+            class="bg-link-hover w-full h-full flex items-center p-5 text-gray-400 relative active"
+          >
+            <svg
+              class="mr-4"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.1 2.29999C2.65818 2.29999 2.3 2.65816 2.3 3.09999V9.89999C2.3 10.3418 2.65818 10.7 3.1 10.7H9.9C10.3418 10.7 10.7 10.3418 10.7 9.89999V3.09999C10.7 2.65816 10.3418 2.29999 9.9 2.29999H3.1ZM3.1 13.3C2.65818 13.3 2.3 13.6582 2.3 14.1V20.9C2.3 21.3418 2.65818 21.7 3.1 21.7H9.9C10.3418 21.7 10.7 21.3418 10.7 20.9V14.1C10.7 13.6582 10.3418 13.3 9.9 13.3H3.1ZM13.3 3.09999C13.3 2.65816 13.6582 2.29999 14.1 2.29999H20.9C21.3418 2.29999 21.7 2.65816 21.7 3.09999V9.89999C21.7 10.3418 21.3418 10.7 20.9 10.7H14.1C13.6582 10.7 13.3 10.3418 13.3 9.89999V3.09999ZM14.1 13.3C13.6582 13.3 13.3 13.6582 13.3 14.1V20.9C13.3 21.3418 13.6582 21.7 14.1 21.7H20.9C21.3418 21.7 21.7 21.3418 21.7 20.9V14.1C21.7 13.6582 21.3418 13.3 20.9 13.3H14.1ZM14.75 14.75H20.25V20.25H14.75V14.75ZM20.25 3.74998H14.75V9.24998H20.25V3.74998ZM3.75 3.74998H9.25V9.24998H3.75V3.74998ZM9.25 14.75H3.75V20.25H9.25V14.75Z"
+                fill="#BFC5D2"
+              />
+              <mask
+                id="mask0_2:22098"
+                style="mask-type: alpha"
+                maskUnits="userSpaceOnUse"
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3.1 2.29999C2.65818 2.29999 2.3 2.65816 2.3 3.09999V9.89999C2.3 10.3418 2.65818 10.7 3.1 10.7H9.9C10.3418 10.7 10.7 10.3418 10.7 9.89999V3.09999C10.7 2.65816 10.3418 2.29999 9.9 2.29999H3.1ZM3.1 13.3C2.65818 13.3 2.3 13.6582 2.3 14.1V20.9C2.3 21.3418 2.65818 21.7 3.1 21.7H9.9C10.3418 21.7 10.7 21.3418 10.7 20.9V14.1C10.7 13.6582 10.3418 13.3 9.9 13.3H3.1ZM13.3 3.09999C13.3 2.65816 13.6582 2.29999 14.1 2.29999H20.9C21.3418 2.29999 21.7 2.65816 21.7 3.09999V9.89999C21.7 10.3418 21.3418 10.7 20.9 10.7H14.1C13.6582 10.7 13.3 10.3418 13.3 9.89999V3.09999ZM14.1 13.3C13.6582 13.3 13.3 13.6582 13.3 14.1V20.9C13.3 21.3418 13.6582 21.7 14.1 21.7H20.9C21.3418 21.7 21.7 21.3418 21.7 20.9V14.1C21.7 13.6582 21.3418 13.3 20.9 13.3H14.1ZM14.75 14.75H20.25V20.25H14.75V14.75ZM20.25 3.74998H14.75V9.24998H20.25V3.74998ZM3.75 3.74998H9.25V9.24998H3.75V3.74998ZM9.25 14.75H3.75V20.25H9.25V14.75Z"
+                  fill="white"
+                />
+              </mask>
+              <g mask="url(#mask0_2:22098)"></g>
+            </svg>
+            <span class="link-label">Dashboard</span>
+          </a>
+        </li>
+        <!--  -->
+        <li class="h-14 w-full">
+          <a
+            href="/form"
+            class="hover:bg-link-hover transition-colors duration-500 w-full h-full flex items-center p-5 text-gray-400 relative"
+          >
+            <svg
+              class="mr-4"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.9531 2H10.0469C9.72328 2 9.46094 2.31231 9.46094 2.69754V21.2987C9.46094 21.684 9.72328 21.9963 10.0469 21.9963H13.9531C14.2767 21.9963 14.5391 21.684 14.5391 21.2987V2.69754C14.5391 2.31231 14.2767 2 13.9531 2ZM13.3672 20.6012H10.6328V13.6257H13.3672V20.6012ZM13.3672 12.2307H10.6328V3.39509H13.3672V12.2307ZM6.49219 10.3705H2.58594C2.26234 10.3705 2 10.6828 2 11.0681V21.2987C2 21.684 2.26234 21.9963 2.58594 21.9963H6.49219C6.81578 21.9963 7.07812 21.684 7.07812 21.2987V11.0681C7.07812 10.6828 6.81578 10.3705 6.49219 10.3705ZM3.17188 20.6012H5.90625V18.276H3.17188V20.6012ZM5.90625 16.881H3.17188V11.7656H5.90625V16.881ZM17.5078 10.3705H21.4141C21.7377 10.3705 22 10.6828 22 11.0681V21.2987C22 21.684 21.7377 21.9963 21.4141 21.9963H17.5078C17.1842 21.9963 16.9219 21.684 16.9219 21.2987V11.0681C16.9219 10.6828 17.1842 10.3705 17.5078 10.3705ZM20.8281 20.6012H18.0938V18.276H20.8281V20.6012ZM18.0938 16.881H20.8281V11.7656H18.0938V16.881Z"
+                fill="#BFC5D2"
+              />
+              <mask
+                id="mask0_2:22121"
+                style="mask-type: alpha"
+                maskUnits="userSpaceOnUse"
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.9531 2H10.0469C9.72328 2 9.46094 2.31231 9.46094 2.69754V21.2987C9.46094 21.684 9.72328 21.9963 10.0469 21.9963H13.9531C14.2767 21.9963 14.5391 21.684 14.5391 21.2987V2.69754C14.5391 2.31231 14.2767 2 13.9531 2ZM13.3672 20.6012H10.6328V13.6257H13.3672V20.6012ZM13.3672 12.2307H10.6328V3.39509H13.3672V12.2307ZM6.49219 10.3705H2.58594C2.26234 10.3705 2 10.6828 2 11.0681V21.2987C2 21.684 2.26234 21.9963 2.58594 21.9963H6.49219C6.81578 21.9963 7.07812 21.684 7.07812 21.2987V11.0681C7.07812 10.6828 6.81578 10.3705 6.49219 10.3705ZM3.17188 20.6012H5.90625V18.276H3.17188V20.6012ZM5.90625 16.881H3.17188V11.7656H5.90625V16.881ZM17.5078 10.3705H21.4141C21.7377 10.3705 22 10.6828 22 11.0681V21.2987C22 21.684 21.7377 21.9963 21.4141 21.9963H17.5078C17.1842 21.9963 16.9219 21.684 16.9219 21.2987V11.0681C16.9219 10.6828 17.1842 10.3705 17.5078 10.3705ZM20.8281 20.6012H18.0938V18.276H20.8281V20.6012ZM18.0938 16.881H20.8281V11.7656H18.0938V16.881Z"
+                  fill="white"
+                />
+              </mask>
+              <g mask="url(#mask0_2:22121)"></g>
+            </svg>
+            <span class="link-label">Add a task</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="ml-60 pt-16 max-h-screen overflow-auto">
+      <div class="px-6 py-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-3xl p-8 mb-5">
+            <h1 class="text-3xl font-bold mb-10">
+              Take control of your tasks, streamline your workflow with ease.
+            </h1>
+
+            <hr class="my-10" />
+
+            <div class="">
+              <div>
+                <h2 class="text-2xl font-bold mb-4">Your tasks today</h2>
+
+                <div class="space-y-4">
+                  <div
+                    class="p-4 bg-white border rounded-xl text-gray-800 space-y-2"
+                  >
+                    <div class="flex justify-between">
+                      <div class="text-gray-400 text-xs">Grace Aroma</div>
+                      <div class="text-gray-400 text-xs">7d</div>
+                    </div>
+                    <a
+                      href="javascript:void(0)"
+                      class="font-bold hover:text-yellow-800 hover:underline"
+                      >New campaign review</a
+                    >
+                    <div class="text-sm text-gray-600">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        fill="currentColor"
+                        class="text-gray-800 inline align-middle mr-1"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+                        /></svg
+                      >New feedback
+                    </div>
+                  </div>
+<!-- 
+                  <div
+                    class="p-4 bg-white border rounded-xl text-gray-800 space-y-2"
+                  >
+                    <div class="flex justify-between">
+                      <div class="text-gray-400 text-xs">Grace Aroma</div>
+                      <div class="text-gray-400 text-xs">7d</div>
+                    </div>
+                    <a
+                      href="javascript:void(0)"
+                      class="font-bold hover:text-yellow-800 hover:underline"
+                      >New campaign review</a
+                    >
+                    <div class="text-sm text-gray-600">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        fill="currentColor"
+                        class="text-gray-800 inline align-middle mr-1"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+                        /></svg
+                      >New feedback
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="/static/index.js"></script>
+</html>
