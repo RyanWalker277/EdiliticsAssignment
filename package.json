@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": "https://github.com/RyanWalker277/EdiliticsAssignment.git",
   "author": "Ryanwalker277 <andianurag277@gmail.com>",
